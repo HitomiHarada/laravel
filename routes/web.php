@@ -11,15 +11,18 @@
 |
 */
 
-use Illuminate\Routing\Route;
-use Illuminate\Support\Facades\URL;
+//use Illuminate\Routing\Route;
+//use Illuminate\Support\Facades\URL;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('posts/posts','PostController@store');
 Route::resource('posts', 'PostController');
 
-    if (env('APP_ENV') === 'local') {
-    URL::forceScheme('https');
-} 
+
+
+//if (env('APP_ENV') === 'local') {
+//    URL::forceScheme('https');
+//} 
