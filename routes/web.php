@@ -18,7 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('posts/posts','PostController@store');
+Route::get('/','PostController@index');
+
+//Route::post('posts/posts','PostController@store');
 Route::resource('posts', 'PostController');
 
 
